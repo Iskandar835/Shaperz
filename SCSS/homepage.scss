@@ -1,7 +1,45 @@
+@import './variables';
+
+
+//**** GENERAL ****
+
 body {
+    color: #FFF;
     font-family: 'Jost', sans-serif;
 }
 
 h1 {
     font-family: 'Garamond', sans-serif;
 }
+
+a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+
+//**** HEADER ****
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px;
+    background-color: $primary-color;
+}
+
+.title-logo {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.internal-link {
+    display: flex;
+    gap: 35px;
+}
+
+.external-link {
+    display: flex;
+    gap: 35px;
+}
+

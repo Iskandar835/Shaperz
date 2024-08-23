@@ -1,7 +1,36 @@
 body {
+  color: #FFF;
   font-family: "Jost", sans-serif;
 }
 
 h1 {
   font-family: "Garamond", sans-serif;
+}
+
+a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px;
+  background-color: #0B1D26;
+}
+
+.title-logo {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.internal-link {
+  display: flex;
+  gap: 35px;
+}
+
+.external-link {
+  display: flex;
+  gap: 35px;
 }/*# sourceMappingURL=homepage.css.map */
