@@ -1,45 +1,75 @@
+@import './mixins';
 @import './variables';
 
 
 //**** GENERAL ****
 
 body {
-    color: #FFF;
+    color: $body-font-color;
     font-family: 'Jost', sans-serif;
-}
-
-h1 {
-    font-family: 'Garamond', sans-serif;
+    font-size: 18px;
+    background-color: $primary-color;
 }
 
 a {
-    color: #FFF;
+    color: $body-font-color;
     text-decoration: none;
+}
+
+main {
+    @include flexCenter;
+}
+
+h1 {
+    margin: 0;
+    font-family: 'Garamond', sans-serif;
+    font-size: 85px;
+    font-weight: 400;
+    .span-title {
+        display: block;
+    }
 }
 
 
 //**** HEADER ****
 
-header {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 35px;
-    background-color: $primary-color;
+    &__logo {
+        font-size: 24px;
+        font-weight: 500;
+    }
+    &__link {
+        display: flex;
+        gap: 35px;
+    }
 }
 
-.title-logo {
-    font-size: 24px;
-    font-weight: 500;
+
+//**** INTRO SECTION ****
+
+.intro {
+    @include flexColumn;
+    align-items: flex-start;
+    margin-top: 200px;
 }
 
-.internal-link {
-    display: flex;
-    gap: 35px;
+.chapter {
+    @include flexRow;
+    align-items: center;
+    gap: 15px;
+    color: $secondary-color;
+    font-weight: 600;
+    &__border {
+        border-top: 2px solid $secondary-color;
+        width: 70px;
+    }
+    &__icon {
+        margin-left: 15px;
+    }
 }
 
-.external-link {
-    display: flex;
-    gap: 35px;
-}
 
