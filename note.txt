@@ -1,1 +1,7 @@
 Notes concernant l'avancer du projet: 
+
+
+a faire : 
+- s'occuper des chapitres
+- mettre big photo derriere intro (concernant ceci le mettre pour l'instant de coté
+a noter qu'il faut utiliser le box shadow pour pour faire l'effet de fondu.)
