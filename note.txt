@@ -2,6 +2,6 @@ Notes concernant l'avancer du projet:
 
 
 a faire : 
-- s'occuper des chapitres
+- finir des chapitres (structure operationnel juste a copier coller et modif row-reverse)
 - mettre big photo derriere intro (concernant ceci le mettre pour l'instant de coté
 a noter qu'il faut utiliser le box shadow pour pour faire l'effet de fondu.)

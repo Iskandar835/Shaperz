@@ -1,5 +1,4 @@
 body {
-  height: 100vh;
   margin: 0;
   color: #FFF;
   font-family: "Jost", sans-serif;
@@ -16,6 +15,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   background-color: rgba(255, 255, 255, 0);
 }
 
@@ -27,6 +27,23 @@ h1 {
 }
 h1 .span-title {
   display: block;
+}
+
+h2 {
+  margin: 0;
+  font-family: "Garamond", sans-serif;
+  font-size: 45px;
+  font-weight: 400;
+}
+
+h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #FBD784;
+}
+h3 .click {
+  cursor: pointer;
 }
 
 .header {
@@ -52,18 +69,50 @@ h1 .span-title {
   margin-top: 200px;
 }
 
-.chapter {
+.epigraph {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 15px;
   color: #FBD784;
-  font-weight: 600;
+  font-weight: 500;
 }
-.chapter__border {
+.epigraph__border {
   border-top: 2px solid #FBD784;
   width: 70px;
 }
-.chapter__icon {
+.epigraph__icon {
   margin-left: 15px;
+}
+
+.all__chapters {
+  margin: 450px 400px 0 400px;
+}
+
+.chapter {
+  display: flex;
+}
+.chapter__content {
+  display: flex;
+  flex-direction: column;
+}
+.chapter__number {
+  position: relative;
+  z-index: 2;
+  right: 55px;
+  bottom: 35px;
+  font-size: 165px;
+  font-weight: 600;
+  color: #354147;
+}
+.chapter__text {
+  position: relative;
+  z-index: 3;
+  bottom: 200px;
+  padding: 20px 40px;
+}
+.chapter img {
+  width: 350px;
+  height: 500px;
+  border-radius: 5px;
 }/*# sourceMappingURL=homepage.css.map */

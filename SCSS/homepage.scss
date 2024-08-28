@@ -5,7 +5,6 @@
 //**** GENERAL ****
 
 body {
-    height: 100vh;
     margin: 0;
     color: $body-font-color;
     font-family: 'Jost', sans-serif;
@@ -37,6 +36,7 @@ a {
 
 main {
     @include flexCenter;
+    flex-direction: column;
     background-color: #ffffff00;
 }
 
@@ -47,6 +47,23 @@ h1 {
     font-weight: 400;
     .span-title {
         display: block;
+    }
+}
+
+h2 {
+    margin: 0;
+    font-family: 'Garamond', sans-serif;
+    font-size: 45px;
+    font-weight: 400;
+}
+
+h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: $secondary-color;
+    .click {
+        cursor: pointer;
     }
 }
 
@@ -78,12 +95,12 @@ h1 {
     margin-top: 200px;
 }
 
-.chapter {
+.epigraph {
     @include flexRow;
     align-items: center;
     gap: 15px;
     color: $secondary-color;
-    font-weight: 600;
+    font-weight: 500;
     &__border {
         border-top: 2px solid $secondary-color;
         width: 70px;
@@ -92,5 +109,43 @@ h1 {
         margin-left: 15px;
     }
 }
+
+
+//**** All CHAPTER SECTION ****
+
+.all__chapters {
+    margin: 450px 400px 0 400px;
+}
+
+.chapter {
+    display: flex;
+    &__content {
+        @include flexColumn
+    }
+    &__number {
+        position: relative;
+        z-index: 2;
+        right: 55px;
+        bottom: 35px;
+        font-size: 165px;
+        font-weight: 600;
+        color: #354147;
+    }
+    &__text {
+        position: relative;
+        z-index: 3;
+        bottom: 200px;
+        padding: 20px 40px;
+    }
+    img {
+        width: 350px;
+        height: 500px;
+        border-radius: 5px;
+    }
+}
+
+
+
+
 
 
