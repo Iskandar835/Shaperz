@@ -119,6 +119,7 @@ h3 {
 
 .chapter {
     display: flex;
+    gap: 150px;
     &__content {
         @include flexColumn
     }
@@ -144,6 +145,9 @@ h3 {
     }
 }
 
+.peer {
+    @include rowReverse
+}
 
 
 

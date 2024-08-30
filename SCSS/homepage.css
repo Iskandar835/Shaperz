@@ -91,6 +91,7 @@ h3 .click {
 
 .chapter {
   display: flex;
+  gap: 150px;
 }
 .chapter__content {
   display: flex;
@@ -115,4 +116,9 @@ h3 .click {
   width: 350px;
   height: 500px;
   border-radius: 5px;
+}
+
+.peer {
+  display: flex;
+  flex-direction: row-reverse;
 }/*# sourceMappingURL=homepage.css.map */
