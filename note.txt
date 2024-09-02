@@ -1,7 +1,14 @@
 Notes concernant l'avancer du projet: 
 
 
-a faire : 
-- finir des chapitres (structure operationnel juste a copier coller et modif row-reverse)
+a faire pour demain : 
+- faire footer 
 - mettre big photo derriere intro (concernant ceci le mettre pour l'instant de coté
 a noter qu'il faut utiliser le box shadow pour pour faire l'effet de fondu.)
+- faire soulignement secondary color avec animation transform-origine center
+- Remplacer text "en savoir plus" par button (style FA mais plus transparent)
+- Faire responsive 
+- faire modale avec js style carrousel de page un qui decrit mieux la board avec
+    pics d'un wave et une avec un guide pour le contact (deroulement infini)
+- Redimenssionner image, faire SEO et ACCESS
+- Voir animation fondu sur les chapitres
