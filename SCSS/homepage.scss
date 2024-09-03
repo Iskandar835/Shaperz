@@ -86,11 +86,37 @@ h4 {
         font-size: 24px;
         font-weight: 500;
     }
-    &__link {
+    &__navBar {
         display: flex;
         gap: 35px;
     }
-}
+    &__link {
+        display: inline;
+        &::after {
+            content: "";
+            display: block;
+            height: 2px;
+            width: 100%;
+            background: $secondary-color;
+            transform: scale(0);
+            transition: transform 0.2s ease-in-out;
+        }
+        &:hover::after {
+            transform: scaleX(1);
+        }
+    }
+    &__socialIcon {
+        display: flex;
+        gap: 35px;
+        i {
+            font-size: 25px;
+            transition: color 0.2s ease-in-out;
+        }
+        i:hover {
+            color: $secondary-color;
+        }
+    }
+} 
 
 
 //**** INTRO SECTION ****

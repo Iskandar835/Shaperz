@@ -64,9 +64,35 @@ h4 {
   font-size: 24px;
   font-weight: 500;
 }
-.header__link {
+.header__navBar {
   display: flex;
   gap: 35px;
+}
+.header__link {
+  display: inline;
+}
+.header__link::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: #FBD784;
+  transform: scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+.header__link:hover::after {
+  transform: scaleX(1);
+}
+.header__socialIcon {
+  display: flex;
+  gap: 35px;
+}
+.header__socialIcon i {
+  font-size: 25px;
+  transition: color 0.2s ease-in-out;
+}
+.header__socialIcon i:hover {
+  color: #FBD784;
 }
 
 .intro {
