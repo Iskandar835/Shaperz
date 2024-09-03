@@ -59,19 +59,20 @@ h2 {
 
 h3 {
     margin: 0;
-    font-size: 14px;
-    font-weight: 500;
-    color: $secondary-color;
-    .click {
-        cursor: pointer;
-    }
-}
-
-h4 {
-    margin: 0;
     font-weight: 600;
     font-size: 20px;
     color: $secondary-color;
+}
+
+.btn {
+    padding: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    color: $primary-color;
+    background: $secondary-color;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 //**** HEADER ****
@@ -169,6 +170,15 @@ h4 {
         z-index: 3;
         bottom: 200px;
         padding: 20px 40px;
+        .btn__wantMore {
+            margin-top: 10px;
+            box-shadow: rgba(252, 252, 252, 0.2) 5px 25px 13px -18px;
+            transition: all 235ms ease-in-out;
+            &:hover {
+                box-shadow: rgba(255, 255, 255, 0.3) 2px 8px 8px -5px;
+                transform: translate3d(0, 2px, 0);
+            }
+        }
     }
     img {
         width: 350px;

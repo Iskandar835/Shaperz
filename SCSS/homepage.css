@@ -38,19 +38,20 @@ h2 {
 
 h3 {
   margin: 0;
-  font-size: 14px;
-  font-weight: 500;
-  color: #FBD784;
-}
-h3 .click {
-  cursor: pointer;
-}
-
-h4 {
-  margin: 0;
   font-weight: 600;
   font-size: 20px;
   color: #FBD784;
+}
+
+.btn {
+  padding: 15px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0B1D26;
+  background: #FBD784;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .header {
@@ -144,6 +145,15 @@ h4 {
   z-index: 3;
   bottom: 200px;
   padding: 20px 40px;
+}
+.chapter__text .btn__wantMore {
+  margin-top: 10px;
+  box-shadow: rgba(252, 252, 252, 0.2) 5px 25px 13px -18px;
+  transition: all 235ms ease-in-out;
+}
+.chapter__text .btn__wantMore:hover {
+  box-shadow: rgba(255, 255, 255, 0.3) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0);
 }
 .chapter img {
   width: 350px;
