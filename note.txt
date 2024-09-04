@@ -1,13 +1,11 @@
 Notes concernant l'avancer du projet: 
 
 
-a faire pour demain : 
-- Ajouter shadow au img 
-- mettre big photo derriere intro (concernant ceci le mettre pour l'instant de coté
-a noter qu'il faut utiliser le box shadow pour pour faire l'effet de fondu.)
+a faire pour demain :  
 
-- Faire responsive 
 - faire modale avec js style carrousel de page un qui decrit mieux la board avec
     pics d'un wave et une avec un guide pour le contact (deroulement infini)
+- Faire un formulaire
+- Faire responsive 
 - Redimenssionner image, faire SEO et ACCESS
 - Voir animation fondu sur les chapitres
