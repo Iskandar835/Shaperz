@@ -1,10 +1,17 @@
 Notes concernant l'avancer du projet: 
 
 note depuis dernier commit:
-Ajout de la modale, elle s'ouvre et se ferme
 
-a faire pour demain :  
-faire animation modale, puis ajouter contenu
+
+a faire pour demain :
+faire contenu de la modale, reflechir a son algorythme.
+Ajout d'un page a propos, et reflechir pour une solution au link contactez nous  
+
+
+
+note :
+Revoir les probleme du cursor et animation des chevron de la modale car il ne marche pas, revoir aussi 
+l'effet du blur sur le background car il ne veut pas prendre. 
 
 - faire modale avec js style carrousel de page un qui decrit mieux la board avec
     pics d'un wave et une avec un guide pour le contact (deroulement infini)

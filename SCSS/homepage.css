@@ -117,33 +117,85 @@ h3 {
   z-index: 5;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background-color: rgba(255, 255, 255, 0.4);
+  filter: blur(5px);
   transition: opacity 0.4s 0.2s ease-out;
 }
 .modale__section {
   opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   z-index: 6;
-  width: 450px;
-  height: 500px;
-  background: white;
-  border-radius: 5px;
+  width: 35%;
+  height: 550px;
+  border-radius: 10px;
   transition: opacity 0.4s ease-out;
+}
+.modale__section--background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.28);
+  border-radius: 10px;
 }
 .modale__section #closing-cross {
   position: absolute;
-  color: black;
   top: 30px;
   right: 30px;
   font-size: 25px;
   cursor: pointer;
-  transition: text-shadow 0.2s ease-in-out;
+  transition: font-size 0.2s ease-in-out;
 }
 .modale__section #closing-cross:hover {
-  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4745098039);
+  font-size: 28px;
 }
-.modale__section__content {
-  color: #000;
+.modale__section .arrow {
+  position: absolute;
+  font-size: 40px;
+  cursor: pointer;
+  transition: font-size 0.2s ease-in-out;
+}
+.modale__section .arrow:hover {
+  font-size: 33px;
+}
+.modale__section .arrow-right {
+  right: 15px;
+  cursor: pointer;
+}
+.modale__section .arrow-left {
+  left: 15px;
+  cursor: pointer;
+}
+.modale__section p {
+  position: absolute;
+  padding: 0 60px 0 60px;
+  font-size: 20px;
+  text-align: center;
+}
+.modale__section img {
+  width: 100%;
+  height: 550px;
+  border-radius: 10px;
+}
+.modale__section .dots {
+  position: absolute;
+  bottom: 40px;
+  display: flex;
+}
+.modale__section .dot {
+  margin-inline: 5px;
+  width: 13px;
+  height: 13px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid #fff;
+  border-radius: 100%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.modale__section .dot__selected {
+  background-color: #fff;
 }
 .modale.modale__active {
   visibility: visible;
