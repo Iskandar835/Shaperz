@@ -104,6 +104,69 @@ h3 {
 } 
 
 
+//**** MODALE ****
+
+.modale {
+    visibility: hidden;
+    position: fixed;
+    z-index: 4;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    margin-left: -50vw;
+    transition: visibility 0.4s;
+    &__background {
+        opacity: 0;
+        position: relative;
+        z-index: 5;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4); 
+        transition: opacity 0.4s 0.2s ease-out;
+    }
+    &__section {
+        opacity: 0;
+        position: absolute;
+        z-index: 6;
+        width: 450px;
+        height: 500px;
+        background: white;
+        border-radius: 5px;
+        transition: opacity 0.4s ease-out;
+        #closing-cross {
+            position: absolute;
+            color: black;
+            top: 30px;
+            right: 30px;
+            font-size: 25px;
+            cursor: pointer;
+            transition: text-shadow 0.2s ease-in-out;
+            &:hover {
+                text-shadow: 5px 5px 5px #00000079;
+            }
+        }
+        &__content {
+            color: #000;
+        }
+    }
+    &.modale__active {
+        visibility: visible;
+        .modale__background {
+            opacity: 1;
+            transition: opacity 0.4s ease-out;
+        }
+        .modale__section {
+            opacity: 1;
+            transition: opacity 0.4s 0.2s ease-out;   
+        }
+    }
+}    
+
+
 //**** INTRO SECTION ****
 
 .intro {

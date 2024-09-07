@@ -1,7 +1,10 @@
 Notes concernant l'avancer du projet: 
 
+note depuis dernier commit:
+Ajout de la modale, elle s'ouvre et se ferme
 
 a faire pour demain :  
+faire animation modale, puis ajouter contenu
 
 - faire modale avec js style carrousel de page un qui decrit mieux la board avec
     pics d'un wave et une avec un guide pour le contact (deroulement infini)
