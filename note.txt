@@ -4,14 +4,15 @@ note depuis dernier commit:
 
 
 a faire pour demain :
-faire contenu de la modale, reflechir a son algorythme.
+finir 2eme contenu de la modale, reflechir a son algorythme.
 Ajout d'un page a propos, et reflechir pour une solution au link contactez nous  
 
 
 
 note :
 Revoir les probleme du cursor et animation des chevron de la modale car il ne marche pas, revoir aussi 
-l'effet du blur sur le background car il ne veut pas prendre. 
+l'effet du blur sur le background car il ne veut pas prendre. Peut etre faire keyframe pour animation des icons
+de la modale.
 
 - faire modale avec js style carrousel de page un qui decrit mieux la board avec
     pics d'un wave et une avec un guide pour le contact (deroulement infini)

@@ -13,8 +13,7 @@
     flex-direction: row-reverse;
 }
 
-@mixin flexCenter {
-    display: flex;
+@mixin center {
     align-items: center;
     justify-content: center;
 }

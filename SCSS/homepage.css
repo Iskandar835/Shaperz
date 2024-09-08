@@ -50,6 +50,7 @@ h3 {
   font-weight: 600;
   color: #0B1D26;
   background: #FBD784;
+  outline: none;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -102,8 +103,8 @@ h3 {
   position: fixed;
   z-index: 4;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   top: 0;
   left: 50%;
   width: 100vw;
@@ -118,16 +119,17 @@ h3 {
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.4);
-  filter: blur(5px);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   transition: opacity 0.4s 0.2s ease-out;
 }
 .modale__section {
   opacity: 0;
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: absolute;
   z-index: 6;
   width: 35%;
   height: 550px;
@@ -179,6 +181,25 @@ h3 {
   width: 100%;
   height: 550px;
   border-radius: 10px;
+}
+.modale__section form {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+.modale__section form input {
+  height: 30px;
+  margin-bottom: 5px;
+  padding: 10px;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+.modale__section form .btn__form {
+  width: 50%;
+  margin: 30px auto;
 }
 .modale__section .dots {
   position: absolute;
