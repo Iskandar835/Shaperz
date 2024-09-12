@@ -160,6 +160,7 @@ h3 {
         }
         .arrow {
             position: absolute;
+            z-index: 1;
             font-size: 30px;
             cursor: pointer;
             transition: color 0.2s ease-in-out;
@@ -173,8 +174,12 @@ h3 {
         .arrow-left {
             left: 15px;
         }
+        .injection-content {
+            display: contents;
+        }
         p {
             position: absolute;
+            z-index: 0;
             padding: 0 60px 0 60px;
             font-size: 20px;
             text-align: center;
@@ -218,12 +223,12 @@ h3 {
             margin-inline: 5px;
             width: 13px;
             height: 13px;
-            background-color: #ffffff00;
-            border: 2px solid #fff;
+            border: 2px solid $tertiary-color;
             border-radius: 100%;
-            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+            transition: all 300ms ease-in-out;
             &__selected {
-                background-color: #fff;
+                background: #fff;
             }
         }
     }
