@@ -56,6 +56,11 @@ h3 {
   cursor: pointer;
 }
 
+.big-word {
+  font-weight: 550;
+  color: #FBD784;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -219,13 +224,13 @@ h3 {
   margin-inline: 5px;
   width: 13px;
   height: 13px;
-  border: 2px solid #FBD784;
+  border: 2px solid #fff;
   border-radius: 100%;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   transition: all 300ms ease-in-out;
 }
 .modale__section .dot__selected {
-  background: #fff;
+  background: #FBD784;
 }
 .modale.modale__active {
   visibility: visible;
@@ -243,7 +248,7 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 35px;
+  gap: 20px;
   margin-top: 200px;
 }
 .intro i {
@@ -267,7 +272,11 @@ h3 {
 }
 
 .all__chapters {
-  margin: 400px 400px 150px 400px;
+  margin: 300px 400px 0 400px;
+}
+.all__chapters--title {
+  margin-bottom: 100px;
+  text-align: center;
 }
 
 .chapter {
@@ -317,6 +326,32 @@ h3 {
 .main-end-border {
   border-top: 1px solid #FBD784;
   width: 80%;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  margin: 150px 300px 300px 300px;
+  text-align: center;
+}
+.contact__title {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact__info {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+.contact__info ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%;
+  padding: 0;
+  list-style-type: none;
 }
 
 .footer {

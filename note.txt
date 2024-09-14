@@ -5,7 +5,7 @@ note depuis dernier commit:
 
 a faire pour demain :
 commenter les fonction JS et dire ce qu'elle font
-Ajout d'un page a propos, et reflechir pour une solution au link contactez nous  
+ajout formulaire.
 
 
 

@@ -40,6 +40,9 @@ closingModale();
 
 
 function modaleFirstPage() {
+    const arrowleft = document.getElementById("prev");
+    arrowleft.style.visibility = "hidden";
+
     const parent = document.querySelector(".injection-content");
     
     const text = document.createElement("p");
@@ -55,6 +58,9 @@ function modaleFirstPage() {
 
 
 function modaleSecondPage() {
+    const arrowleft = document.getElementById("prev");
+    arrowleft.style.visibility = "visible";
+
     const parent = document.querySelector(".injection-content");
     
     const cover = document.createElement("img");
