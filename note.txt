@@ -4,7 +4,6 @@ note depuis dernier commit:
 
 
 a faire pour demain :
-finir media mobile
 commenter les fonction JS et dire ce qu'elle font
 
 
