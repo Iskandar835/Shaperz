@@ -1,5 +1,5 @@
 @import './mixins';
-@import './variables';
+@import './colors';
 
 
 //**** GENERAL ****
@@ -8,14 +8,9 @@ body {
     margin: 0;
     color: $body-font-color;
     font-family: 'Jost', sans-serif;
-    font-size: 18px;
+    font-size: 1.12rem;
     background: linear-gradient(to top, $primary-color 30%,  $secondary-color 100%);
     background-repeat: no-repeat;
-}
-
-a {
-    color: $body-font-color;
-    text-decoration: none;
 }
 
 main {
@@ -28,7 +23,7 @@ main {
 h1 {
     margin: 0;
     font-family: 'Garamond', sans-serif;
-    font-size: 85px;
+    font-size: 5.30rem;
     font-weight: 400;
     .span-title {
         display: block;
@@ -38,20 +33,18 @@ h1 {
 h2 {
     margin: 0;
     font-family: 'Garamond', sans-serif;
-    font-size: 45px;
+    font-size: 2.80rem;
     font-weight: 400;
 }
 
-h3 {
-    margin: 0;
-    font-weight: 600;
-    font-size: 20px;
-    color: $tertiary-color;
+a {
+    color: $body-font-color;
+    text-decoration: none;
 }
 
 .btn {
     padding: 15px;
-    font-size: 14px;
+    font-size: 0.9rem;
     font-weight: 600;
     color: $primary-color;
     background: $tertiary-color;
@@ -75,7 +68,7 @@ h3 {
     padding: 35px;
     background-color: #ffffff00;
     &__logo {
-        font-size: 24px;
+        font-size: 1.5rem;
         font-weight: 500;
     }
     &__navBar {
@@ -101,7 +94,7 @@ h3 {
         display: flex;
         gap: 35px;
         i {
-            font-size: 25px;
+            font-size: 1.5rem;
             transition: color 0.2s ease-in-out;
         }
         i:hover {
@@ -109,147 +102,6 @@ h3 {
         }
     }
 } 
-
-
-//**** MODALE ****
-
-.modale {
-    visibility: hidden;
-    position: fixed;
-    z-index: 4;
-    display: flex;
-    @include center;
-    top: 0;
-    left: 50%;
-    width: 100vw;
-    height: 100vh;
-    margin-left: -50vw;
-    transition: visibility 0.4s;
-    &__background {
-        opacity: 0;
-        position: relative;
-        z-index: 5;
-        width: 100%;
-        height: 100%;
-        backdrop-filter: blur(10px);
-        --webkit-backdrop-filter: blur(10px);
-        transition: opacity 0.4s 0.2s ease-out;
-    }
-    &__section {
-        opacity: 0;
-        position: absolute;
-        @include flexColumn;
-	    @include center;
-        z-index: 6;
-        width: 680px;
-        height: 500px;
-        border-radius: 10px;
-        transition: opacity 0.4s ease-out;
-        &--background {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.28);
-            border-radius: 10px;
-        }
-        #closing-cross {
-            position: absolute;
-            top: 30px;
-            right: 30px;
-            font-size: 25px;
-            cursor: pointer;
-            transition: color 0.2s ease-in-out;
-            &:hover {
-                color: $tertiary-color;
-            }
-        }
-        .arrow {
-            position: absolute;
-            z-index: 1;
-            font-size: 30px;
-            cursor: pointer;
-            transition: color 0.2s ease-in-out;
-            &:hover {
-                color: $tertiary-color;
-            }
-        }
-        .arrow-right {
-            right: 15px;
-        }
-        .arrow-left {
-            left: 15px;
-        }
-        .injection-content {
-            display: contents;
-        }
-        p {
-            position: absolute;
-            z-index: 0;
-            padding: 0 60px 0 60px;
-            font-size: 20px;
-            text-align: center;
-        }
-        img {
-            width: 100%;
-            height: 100%;
-            border-radius: 10px;          
-        }
-        form {
-            position: absolute;
-            @include flexColumn;
-            width: 60%;
-            input {
-                height: 30px;
-                margin-bottom: 5px;
-                padding: 10px;
-                font-size: 20px;
-                outline: none;
-                border: none;
-                border-radius: 5px;
-            }
-            .btn__form {
-                width: 50%;
-                margin: 30px auto;
-                transition: all 250ms ease-in-out;
-            }
-            .btn__form:hover {
-                width: 53%;
-                font-size: 15px;
-                color: #fff;
-                background-color: $secondary-color;
-            }
-        }
-        .dots {
-            position: absolute;
-            bottom: 40px;
-            display: flex;
-        }
-        .dot {
-            margin-inline: 5px;
-            width: 13px;
-            height: 13px;
-            border: 2px solid #fff;
-            border-radius: 100%;
-            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-            transition: all 300ms ease-in-out;
-            &__selected {
-                background: $tertiary-color;
-            }
-        }
-    }
-    &.modale__active {
-        visibility: visible;
-        .modale__background {
-            opacity: 1;
-            transition: opacity 0.4s ease-out;
-        }
-        .modale__section {
-            opacity: 1;
-            transition: opacity 0.4s 0.2s ease-out;   
-        }
-    }
-}    
-
 
 //**** INTRO SECTION ****
 
@@ -267,17 +119,13 @@ h3 {
     @include flexRow;
     align-items: center;
     gap: 15px;
-    color: $tertiary-color;
     font-weight: 500;
+    color: $tertiary-color;
     &__border {
-        border-top: 2px solid $tertiary-color;
         width: 70px;
-    }
-    &__icon {
-        margin-left: 15px;
+        border-top: 2px solid $tertiary-color;
     }
 }
-
 
 //**** All CHAPTER SECTION ****
 
@@ -300,7 +148,7 @@ h3 {
         z-index: 2;
         right: 55px;
         bottom: 35px;
-        font-size: 165px;
+        font-size: 10.30rem;
         font-weight: 600;
         color: #354147;
     }
@@ -331,12 +179,6 @@ h3 {
     @include rowReverse
 }
 
-.main-end-border {
-    border-top: 1px solid $tertiary-color;
-    width: 80%;
-}
-
-
 //**** CONTACT SECTION ****
 
 .contact {
@@ -362,6 +204,10 @@ h3 {
     }
 }
 
+.main-end-border {
+    border-top: 1px solid $tertiary-color;
+    width: 80%;
+}
 
 //**** FOOTER ****
 
@@ -389,6 +235,12 @@ h3 {
         padding: 0;
         li {
             margin-top: 15px;
+        }
+        .list-subtitle {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: $tertiary-color;
         }
     }
 }
@@ -432,7 +284,7 @@ h3 {
 @media (min-width: 769px) and (max-width: 1024px) {
 
     h1 {
-        font-size: 65px;
+        font-size: 4rem;
     }
 
     .intro {
@@ -464,20 +316,19 @@ h3 {
     }
 }
 
-
 //** Media queries for mobile **
 @media (min-width: 320px) and (max-width: 768px) {
 
     body {
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     h1 {
-        font-size: 45px;
+        font-size: 2.80rem;
     }
 
     h2 {
-        font-size: 35px;
+        font-size: 2.20rem;
     }
 
     .btn {
@@ -494,46 +345,6 @@ h3 {
         }
         &__socialIcon {
             display: none;
-        }
-    }
-
-    .modale__section {
-        width: 515px;
-        height: 320px;
-        .injection-content {
-            p {
-                font-size: 15px;
-            }
-            input {
-                height: 15px;
-                margin-bottom: 0;
-            }
-            .btn__form {
-                padding: 10px;
-            }
-        }
-        .dots {
-            bottom: 20px;
-        }
-    }
-
-    @media (min-width: 320px) and (max-width: 550px) {
-        .modale__section {
-            width: 300px;
-            height: 330px;
-            &--background {
-                background: linear-gradient($secondary-color, $primary-color);
-            }
-            #closing-cross {
-                top: 15px;
-                right: 15px;
-            }
-            p {
-                font-size: 13px;
-            }
-            img {
-                display: none;
-            }
         }
     }
 
@@ -590,7 +401,7 @@ h3 {
             display: flex;
             justify-content: space-evenly;
             i {
-                font-size: 35px;
+                font-size: 2.20rem;
                 transition: color 0.2s ease-in-out;
             }
             i:hover {
@@ -602,7 +413,7 @@ h3 {
             width: 100%;
         }
         .Copyright {
-            font-size: 12px;
+            font-size: 0.75rem;
         }
     }
 }

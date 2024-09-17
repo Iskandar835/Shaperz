@@ -1,13 +1,6 @@
-const modale = document.querySelector(".modale");
-
-    
-function clearModale () {
-    const parent = document.querySelector(".injection-content");
-    parent.innerHTML = "";
-};
-
-
+//* This function open the modale *
 function openModale() {
+    const modale = document.querySelector(".modale");
     const button = document.querySelectorAll(".btn__wantMore");
     
     button.forEach(btn => {
@@ -18,13 +11,13 @@ function openModale() {
         }); 
     });
 };
-
 openModale();
 
-
+//* This function close the modale *
 function closingModale() {
-    const closingCross = document.getElementById("closing-cross");
+    const modale = document.querySelector(".modale");
     const modaleBG = document.querySelector(".modale__background");
+    const closingCross = document.getElementById("closing-cross");
     
     closingCross.addEventListener("click", () => {
         modale.classList.remove("modale__active");
@@ -35,19 +28,25 @@ function closingModale() {
         clearModale();
     });
 };
-
 closingModale();
 
+//* This function clears the modale *
+function clearModale () {
+    const parent = document.querySelector(".injection-content");
+    parent.innerHTML = "";
+};
 
+//* This function makes the first page of the modale *
 function modaleFirstPage() {
     const arrowleft = document.getElementById("prev");
     arrowleft.style.visibility = "hidden";
+    const arrowRight = document.getElementById("next");
+    arrowRight.style.visibility = "visible";
 
     const parent = document.querySelector(".injection-content");
     
     const text = document.createElement("p");
-    text.innerText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit cupiditate ipsum, accusantium quae blanditiis a numquam dolorum, esse, ducimus quasi illum assumenda eveniet? Amet, a error. At impedit nam facere praesentium maiores magni quibusdam voluptatibus suscipit veniam, rem nesciunt iste, ratione cupiditate laborum sed. Dolorem eos hic facilis itaque cupiditate.";
-    
+    text.innerText = "Le shaper fabrique des planches de surf de manière artisanale, sculptant le pain de mousse pour créer des modèles uniques, adaptés aux besoins du surfeur et aux vagues. Contacter nous pour concevoir votre planche sur mesure, performante et esthétique.";
     const cover = document.createElement("img");
     cover.src = "./images/shaping-room.jpg";
     cover.alt = "Picture of shapping room";
@@ -56,17 +55,19 @@ function modaleFirstPage() {
     parent.appendChild(cover);
 };
 
-
+//* This function makes the second page of the modale *
 function modaleSecondPage() {
     const arrowleft = document.getElementById("prev");
     arrowleft.style.visibility = "visible";
+    const arrowRight = document.getElementById("next");
+    arrowRight.style.visibility = "hidden";
 
     const parent = document.querySelector(".injection-content");
     
     const cover = document.createElement("img");
     cover.src = "./images/glassing-room.jpg";
     cover.alt = "Picture of glassing room";
-    parent.appendChild(cover)
+    parent.appendChild(cover);
     
     const form = document.createElement("form");
     const label = document.createElement("label");
@@ -76,6 +77,7 @@ function modaleSecondPage() {
     input.type = "text";
     input.name = "name";
     input.id = "name";
+    input.required = true;
     
     const label2 = document.createElement("label");
     label2.for = "lastname";
@@ -84,6 +86,7 @@ function modaleSecondPage() {
     input2.type = "text";
     input2.name = "lastname";
     input2.id = "lastname";
+    input2.required = true;
     
     const label3 = document.createElement("label");
     label3.for = "email";
@@ -92,6 +95,7 @@ function modaleSecondPage() {
     input3.type = "email";
     input3.name = "email";
     input3.id = "email";
+    input3.required = true;
     
     const button = document.createElement("button");
     button.classList.add("btn", "btn__form");
@@ -104,7 +108,7 @@ function modaleSecondPage() {
     parent.appendChild(form);
 };
 
-
+//* The dotTravel functions allow the spine to adapt according to the page * 
 function dotEstTravel() {
     const firstDot = document.getElementById("first");
     const secondDot = document.getElementById("second");
@@ -122,7 +126,7 @@ function dotWestTravel() {
     firstDot.classList.add("dot__selected");
 };
 
-
+//* This function displays the modale and makes it dynamic *
 function displayAllmodale () {
     const arrowright = document.getElementById("next");
     const arrowleft = document.getElementById("prev");
@@ -139,5 +143,4 @@ function displayAllmodale () {
         modaleFirstPage();
     });
 };
-
 displayAllmodale ();

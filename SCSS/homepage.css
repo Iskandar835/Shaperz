@@ -2,14 +2,9 @@ body {
   margin: 0;
   color: #FFF;
   font-family: "Jost", sans-serif;
-  font-size: 18px;
+  font-size: 1.12rem;
   background: linear-gradient(to top, #0B1D26 30%, #3498db 100%);
   background-repeat: no-repeat;
-}
-
-a {
-  color: #FFF;
-  text-decoration: none;
 }
 
 main {
@@ -23,7 +18,7 @@ main {
 h1 {
   margin: 0;
   font-family: "Garamond", sans-serif;
-  font-size: 85px;
+  font-size: 5.3rem;
   font-weight: 400;
 }
 h1 .span-title {
@@ -33,20 +28,18 @@ h1 .span-title {
 h2 {
   margin: 0;
   font-family: "Garamond", sans-serif;
-  font-size: 45px;
+  font-size: 2.8rem;
   font-weight: 400;
 }
 
-h3 {
-  margin: 0;
-  font-weight: 600;
-  font-size: 20px;
-  color: #FBD784;
+a {
+  color: #FFF;
+  text-decoration: none;
 }
 
 .btn {
   padding: 15px;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-weight: 600;
   color: #0B1D26;
   background: #FBD784;
@@ -69,7 +62,7 @@ h3 {
   background-color: rgba(255, 255, 255, 0);
 }
 .header__logo {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 .header__navBar {
@@ -96,153 +89,11 @@ h3 {
   gap: 35px;
 }
 .header__socialIcon i {
-  font-size: 25px;
+  font-size: 1.5rem;
   transition: color 0.2s ease-in-out;
 }
 .header__socialIcon i:hover {
   color: #FBD784;
-}
-
-.modale {
-  visibility: hidden;
-  position: fixed;
-  z-index: 4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 0;
-  left: 50%;
-  width: 100vw;
-  height: 100vh;
-  margin-left: -50vw;
-  transition: visibility 0.4s;
-}
-.modale__background {
-  opacity: 0;
-  position: relative;
-  z-index: 5;
-  width: 100%;
-  height: 100%;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  --webkit-backdrop-filter: blur(10px);
-  transition: opacity 0.4s 0.2s ease-out;
-}
-.modale__section {
-  opacity: 0;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 6;
-  width: 680px;
-  height: 500px;
-  border-radius: 10px;
-  transition: opacity 0.4s ease-out;
-}
-.modale__section--background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.28);
-  border-radius: 10px;
-}
-.modale__section #closing-cross {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  font-size: 25px;
-  cursor: pointer;
-  transition: color 0.2s ease-in-out;
-}
-.modale__section #closing-cross:hover {
-  color: #FBD784;
-}
-.modale__section .arrow {
-  position: absolute;
-  z-index: 1;
-  font-size: 30px;
-  cursor: pointer;
-  transition: color 0.2s ease-in-out;
-}
-.modale__section .arrow:hover {
-  color: #FBD784;
-}
-.modale__section .arrow-right {
-  right: 15px;
-}
-.modale__section .arrow-left {
-  left: 15px;
-}
-.modale__section .injection-content {
-  display: contents;
-}
-.modale__section p {
-  position: absolute;
-  z-index: 0;
-  padding: 0 60px 0 60px;
-  font-size: 20px;
-  text-align: center;
-}
-.modale__section img {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-}
-.modale__section form {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-}
-.modale__section form input {
-  height: 30px;
-  margin-bottom: 5px;
-  padding: 10px;
-  font-size: 20px;
-  outline: none;
-  border: none;
-  border-radius: 5px;
-}
-.modale__section form .btn__form {
-  width: 50%;
-  margin: 30px auto;
-  transition: all 250ms ease-in-out;
-}
-.modale__section form .btn__form:hover {
-  width: 53%;
-  font-size: 15px;
-  color: #fff;
-  background-color: #3498db;
-}
-.modale__section .dots {
-  position: absolute;
-  bottom: 40px;
-  display: flex;
-}
-.modale__section .dot {
-  margin-inline: 5px;
-  width: 13px;
-  height: 13px;
-  border: 2px solid #fff;
-  border-radius: 100%;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  transition: all 300ms ease-in-out;
-}
-.modale__section .dot__selected {
-  background: #FBD784;
-}
-.modale.modale__active {
-  visibility: visible;
-}
-.modale.modale__active .modale__background {
-  opacity: 1;
-  transition: opacity 0.4s ease-out;
-}
-.modale.modale__active .modale__section {
-  opacity: 1;
-  transition: opacity 0.4s 0.2s ease-out;
 }
 
 .intro {
@@ -261,15 +112,12 @@ h3 {
   flex-direction: row;
   align-items: center;
   gap: 15px;
-  color: #FBD784;
   font-weight: 500;
+  color: #FBD784;
 }
 .epigraph__border {
-  border-top: 2px solid #FBD784;
   width: 70px;
-}
-.epigraph__icon {
-  margin-left: 15px;
+  border-top: 2px solid #FBD784;
 }
 
 .all__chapters {
@@ -293,7 +141,7 @@ h3 {
   z-index: 2;
   right: 55px;
   bottom: 35px;
-  font-size: 165px;
+  font-size: 10.3rem;
   font-weight: 600;
   color: #354147;
 }
@@ -324,11 +172,6 @@ h3 {
   flex-direction: row-reverse;
 }
 
-.main-end-border {
-  border-top: 1px solid #FBD784;
-  width: 80%;
-}
-
 .contact {
   display: flex;
   flex-direction: column;
@@ -353,6 +196,11 @@ h3 {
   width: 50%;
   padding: 0;
   list-style-type: none;
+}
+
+.main-end-border {
+  border-top: 1px solid #FBD784;
+  width: 80%;
 }
 
 .footer {
@@ -382,6 +230,12 @@ h3 {
 .footer ul li {
   margin-top: 15px;
 }
+.footer ul .list-subtitle {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #FBD784;
+}
 
 @media (max-width: 1810px) {
   .all__chapters {
@@ -407,7 +261,7 @@ h3 {
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   h1 {
-    font-size: 65px;
+    font-size: 4rem;
   }
   .intro {
     margin: 150px 50px 0 50px;
@@ -440,13 +294,13 @@ h3 {
 }
 @media (min-width: 320px) and (max-width: 768px) {
   body {
-    font-size: 16px;
+    font-size: 1rem;
   }
   h1 {
-    font-size: 45px;
+    font-size: 2.8rem;
   }
   h2 {
-    font-size: 35px;
+    font-size: 2.2rem;
   }
   .btn {
     border-radius: 15px;
@@ -463,44 +317,6 @@ h3 {
   .header__socialIcon {
     display: none;
   }
-  .modale__section {
-    width: 515px;
-    height: 320px;
-  }
-  .modale__section .injection-content p {
-    font-size: 15px;
-  }
-  .modale__section .injection-content input {
-    height: 15px;
-    margin-bottom: 0;
-  }
-  .modale__section .injection-content .btn__form {
-    padding: 10px;
-  }
-  .modale__section .dots {
-    bottom: 20px;
-  }
-}
-@media (min-width: 320px) and (max-width: 768px) and (min-width: 320px) and (max-width: 550px) {
-  .modale__section {
-    width: 300px;
-    height: 330px;
-  }
-  .modale__section--background {
-    background: linear-gradient(#3498db, #0B1D26);
-  }
-  .modale__section #closing-cross {
-    top: 15px;
-    right: 15px;
-  }
-  .modale__section p {
-    font-size: 13px;
-  }
-  .modale__section img {
-    display: none;
-  }
-}
-@media (min-width: 320px) and (max-width: 768px) {
   .intro {
     gap: 20px;
     margin: 100px 50px 0 50px;
@@ -556,7 +372,7 @@ h3 {
     justify-content: space-evenly;
   }
   .footer__socialIcon i {
-    font-size: 35px;
+    font-size: 2.2rem;
     transition: color 0.2s ease-in-out;
   }
   .footer__socialIcon i:hover {
@@ -568,6 +384,6 @@ h3 {
     width: 100%;
   }
   .footer .Copyright {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }/*# sourceMappingURL=homepage.css.map */

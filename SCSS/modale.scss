@@ -1,0 +1,186 @@
+@import './mixins';
+@import './colors';
+
+
+//**** MODALE ****
+
+.modale {
+    visibility: hidden;
+    position: fixed;
+    z-index: 4;
+    display: flex;
+    @include center;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    margin-left: -50vw;
+    transition: visibility 0.4s;
+    &__background {
+        opacity: 0;
+        position: relative;
+        z-index: 5;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(10px);
+        --webkit-backdrop-filter: blur(10px);
+        transition: opacity 0.4s 0.2s ease-out;
+    }
+    &__section {
+        opacity: 0;
+        position: absolute;
+        @include flexColumn;
+	    @include center;
+        z-index: 6;
+        width: 680px;
+        height: 500px;
+        border-radius: 10px;
+        transition: opacity 0.4s ease-out;
+        &--background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.28);
+            border-radius: 10px;
+        }
+        #closing-cross {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: color 0.2s ease-in-out;
+            &:hover {
+                color: $tertiary-color;
+            }
+        }
+        .arrow {
+            position: absolute;
+            z-index: 1;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: color 0.2s ease-in-out;
+            &:hover {
+                color: $tertiary-color;
+            }
+        }
+        .arrow-right {
+            right: 15px;
+        }
+        .arrow-left {
+            left: 15px;
+        }
+        .injection-content {
+            display: contents;
+        }
+        p {
+            position: absolute;
+            z-index: 0;
+            padding: 0 60px 0 60px;
+            font-size: 1.25rem;
+            text-align: center;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;          
+        }
+        form {
+            position: absolute;
+            @include flexColumn;
+            width: 60%;
+            input {
+                height: 30px;
+                margin-bottom: 5px;
+                padding: 10px;
+                font-size: 1.25rem;
+                outline: none;
+                border: none;
+                border-radius: 5px;
+            }
+            .btn__form {
+                width: 50%;
+                margin: 30px auto;
+                transition: all 250ms ease-in-out;
+            }
+            .btn__form:hover {
+                width: 53%;
+                font-size: 0.95rem;
+                color: $body-font-color;
+                background-color: $secondary-color;
+            }
+        }
+        .dots {
+            position: absolute;
+            display: flex;
+            bottom: 40px;
+        }
+        .dot {
+            margin-inline: 5px;
+            width: 13px;
+            height: 13px;
+            border: 2px solid $body-font-color;
+            border-radius: 100%;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+            transition: all 300ms ease-in-out;
+            &__selected {
+                background: $tertiary-color;
+            }
+        }
+    }
+    &.modale__active {
+        visibility: visible;
+        .modale__background {
+            opacity: 1;
+            transition: opacity 0.4s ease-out;
+        }
+        .modale__section {
+            opacity: 1;
+            transition: opacity 0.4s 0.2s ease-out;   
+        }
+    }
+}    
+
+//** Media queries for mobile **
+@media (min-width: 320px) and (max-width: 768px) {
+
+    .modale__section {
+        width: 515px;
+        height: 320px;
+        .injection-content {
+            p {
+            font-size: 0.95rem;
+            }
+            input {
+                height: 15px;
+                margin-bottom: 0;
+            }
+            .btn__form {
+                padding: 10px;
+            }
+        }
+        .dots {
+            bottom: 20px;
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 550px) {
+    .modale__section {
+        width: 300px;
+        height: 330px;
+        &--background {
+            background: linear-gradient($secondary-color, $primary-color);
+        }
+        #closing-cross {
+            top: 15px;
+            right: 15px;
+        }
+        p {
+            font-size: 0.8rem;
+        }
+        img {
+            display: none;
+        }
+    }
+}
